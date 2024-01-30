@@ -7,6 +7,7 @@ public class PrimeUtilTest
     [DataRow(1, new int[] { })]
     [DataRow(2, new int[] { 2 })]
     [DataRow(3, new int[] { 3 })]
+    [DataRow(4, new int[] { 2, 2 })]
     public void GetPrimeFactors_Returns_ListWithPrimeFactorsOfTheProvidedNumber(int number, int[] intArrayExpected)
     {
         // Arrange
