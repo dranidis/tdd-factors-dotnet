@@ -15,7 +15,7 @@ public class PrimeUtilTest
         // Act
         var actual = Prime.GetPrimeFactors(number);
         // Assert
-        Console.WriteLine("Actual: [" + string.Join(", ", actual) + "]");
+        Console.WriteLine("Input:" + number + " Actual: [" + string.Join(", ", actual) + "]");
         CollectionAssert.AreEqual(expected, actual);
     }
 
