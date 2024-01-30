@@ -15,11 +15,6 @@ public class Prime
             }
         }
 
-        if (number > 1)
-        {
-            primeFactors.Add(number);
-        }
-
         return primeFactors;
     }
 }
