@@ -7,7 +7,7 @@ public class Prime
         List<int> primeFactors = new();
         if (number > 1)
         {
-            primeFactors.Add(2);
+            primeFactors.Add(number);
         }
         return primeFactors;
     }
