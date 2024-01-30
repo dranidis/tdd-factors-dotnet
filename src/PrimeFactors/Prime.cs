@@ -4,6 +4,11 @@ public class Prime
 {
     public static List<int> GetPrimeFactors(int number)
     {
-        return [];
+        List<int> primeFactors = new();
+        if (number > 1)
+        {
+            primeFactors.Add(2);
+        }
+        return primeFactors;
     }
 }

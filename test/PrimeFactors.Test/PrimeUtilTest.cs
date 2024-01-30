@@ -4,7 +4,7 @@ namespace PrimeFactors.Test;
 public class PrimeUtilTest
 {
     [TestMethod]
-    public void GetPrimeFactors_Returns_EmptyList_When_ThereAreNoPrimeFactors_()
+    public void GetPrimeFactors_Returns_ListWithPrimeFactorsOfTheProvidedNumber()
     {
         // Arrange
         var expected = new List<int>();
@@ -25,4 +25,5 @@ public class PrimeUtilTest
         Console.WriteLine("Actual list: [" + string.Join(", ", actual) + "]");
         CollectionAssert.AreEqual(expected, actual);
     }
+
 }
