@@ -12,6 +12,13 @@ public class Prime
                 primeFactors.Add(2);
                 number /= 2;
             }
+
+            while (number % 3 == 0)
+            {
+                primeFactors.Add(3);
+                number /= 3;
+            }
+
             if (number > 1)
             {
                 primeFactors.Add(number);
