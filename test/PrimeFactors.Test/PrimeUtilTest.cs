@@ -4,25 +4,16 @@ namespace PrimeFactors.Test;
 public class PrimeUtilTest
 {
     [TestMethod]
-    public void GetPrimeFactors_Returns_ListWithPrimeFactorsOfTheProvidedNumber()
+    [DataRow(1, new int[] { })]
+    [DataRow(2, new int[] { 2 })]
+    public void GetPrimeFactors_Returns_ListWithPrimeFactorsOfTheProvidedNumber(int number, int[] intArrayExpected)
     {
         // Arrange
-        var expected = new List<int>();
+        var expected = intArrayExpected.ToList();
         // Act
-        var actual = Prime.GetPrimeFactors(1);
+        var actual = Prime.GetPrimeFactors(number);
         // Assert
-        CollectionAssert.AreEqual(expected, actual);
-    }
-
-    [TestMethod]
-    public void GetPrimeFactors_Returns_2_When_NumberIs_2()
-    {
-        // Arrange
-        var expected = new List<int> { 2 };
-        // Act
-        var actual = Prime.GetPrimeFactors(2);
-        // Assert
-        Console.WriteLine("Actual list: [" + string.Join(", ", actual) + "]");
+        Console.WriteLine("Actual: [" + string.Join(", ", actual) + "]");
         CollectionAssert.AreEqual(expected, actual);
     }
 
