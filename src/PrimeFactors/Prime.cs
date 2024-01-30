@@ -6,21 +6,18 @@ public class Prime
     {
         List<int> primeFactors = new();
 
+        for (int i = 2; i <= number; i++)
+        {
+            while (number % i == 0)
+            {
+                primeFactors.Add(i);
+                number /= i;
+            }
+        }
+
         if (number > 1)
         {
-            for (int i = 2; i <= number; i++)
-            {
-                while (number % i == 0)
-                {
-                    primeFactors.Add(i);
-                    number /= i;
-                }
-            }
-
-            if (number > 1)
-            {
-                primeFactors.Add(number);
-            }
+            primeFactors.Add(number);
         }
 
         return primeFactors;
